@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Start a regtest bitcoind and ord server for local testing
+
 set -x
 
 echo -e "Restarting bitcoind and ord server..."

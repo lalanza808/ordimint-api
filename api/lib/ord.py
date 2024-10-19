@@ -1,10 +1,10 @@
 import subprocess
 import json
 
-from api.models import Order
+from api.models import Order, Inscription, TxStatus
 from api.helpers import bcolors, log, to_sats
 from api.config import secrets
-from api.lib.mint import Mint, Inscription, TxStatus
+from api.lib.mint import Mint
 
 
 class Ord(object):

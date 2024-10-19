@@ -4,3 +4,4 @@ MAX_MINT=50
 POSTAGE=600
 CHAIN=regtest
 INSCRIBE_SATS=1200
+IMAGE_PATH=/home/user/ordinals/images

@@ -1,0 +1,12 @@
+[project]
+name = "api"
+version = "0.1.0"
+description = "API for minting ordinals"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi[standard]>=0.115.2",
+    "peewee>=3.17.7",
+    "redis>=5.1.1",
+    "requests>=2.32.3",
+]

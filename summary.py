@@ -33,6 +33,8 @@ try:
     cardinal = json.loads(balance.stdout)["cardinal"]
     mint = Mint().show()
     print(f"Price {mint['price']} sats")
+    print(f"Inscribe Sats {mint['inscribe_sats']} sats")
+    print(f"Postage {mint['postage']} sats")
     print(f"Supply {mint['supply']}/{mint['total_supply']}")
     print(f"Expecting to make {from_atomic(expected_sats)} btc from sales.\nReceived {from_atomic(received_sats)} btc so far.\nSpent {from_atomic(spent_sats)} btc on inscription fees.\nCurrent balance is {from_atomic(cardinal)} btc")
 except:

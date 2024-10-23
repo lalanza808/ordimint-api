@@ -24,5 +24,7 @@ class Mint(object):
             "minted_out": supply >= int(secrets["TOTAL_SUPPLY"]),
             "max_mint": int(secrets["MAX_MINT"]),
             "pending": pending,
-            "chain": secrets["CHAIN"]
+            "chain": secrets["CHAIN"],
+            "inscribe_sats": secrets["INSCRIBE_SATS"],
+            "postage": secrets["POSTAGE"]
         }

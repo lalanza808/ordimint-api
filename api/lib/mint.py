@@ -17,6 +17,9 @@ class Mint(object):
         pending = len(Inscription.select().where(
             Inscription.completed == False  # noqa: E712
         ))
+        ids = Inscription.select().where(
+            Inscription.completed == True
+        ).order_by(Inscription.create_date.asc())
         return {
             "price": int(secrets["MINT_SATS"]),
             "total_supply": int(secrets["TOTAL_SUPPLY"]),
@@ -26,5 +29,6 @@ class Mint(object):
             "pending": pending,
             "chain": secrets["CHAIN"],
             "inscribe_sats": secrets["INSCRIBE_SATS"],
-            "postage": secrets["POSTAGE"]
+            "postage": secrets["POSTAGE"],
+            "inscriptions": [f"{i.tx_id}:0" for i in ids]
         }

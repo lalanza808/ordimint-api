@@ -17,7 +17,7 @@ from api.lib.ord import Ord
 ord_address = json.loads(subprocess.run("ord -r wallet receive".split(), capture_output=True).stdout)["addresses"][0]
 
 
-for i in range(200):
+for i in range(1111):
     Ord().queue_order(
         address=ord_address,
         amount=randrange(1,2),
@@ -36,8 +36,7 @@ for order in Order.select().where(Order.ord_address != None, Order.tx_id == None
             order.save()
             break
     subprocess.run("bitcoin-cli -regtest -rpcwallet=test -generate 1".split(), stdout=subprocess.DEVNULL)
-    sleep(1)
 
 while True:
     subprocess.run("bitcoin-cli -regtest -rpcwallet=test -generate 1".split(), stdout=subprocess.DEVNULL)
-    sleep(5)
+    sleep(90)

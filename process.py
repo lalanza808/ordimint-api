@@ -35,4 +35,4 @@ if __name__ == '__main__':
             print("supply minted out!")
             exit()
         process_orders()
-        #sleep(1)
+        sleep(5)
